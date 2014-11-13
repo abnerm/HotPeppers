@@ -1,7 +1,7 @@
 $( "#pepperBox" ).mousemove(function(){
 	console.log('works')
 	var winWidth = $(window).width()*.5 - 250;
-	var clientCoords = event.pageX - (winWidth+500);
+	var clientCoords = event.pageX - (winWidth + 500);
 	
 	$('#pepperHeat').css("left", clientCoords+"px");
 
