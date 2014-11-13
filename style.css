@@ -1,0 +1,29 @@
+#stage img {
+	max-width: 600px;
+}
+#pepperBox {
+	width: 500px;
+	height: 100px;
+	position: relative;
+	background: #E4E4E4;
+	cursor: pointer;
+}
+#pepper-silhouette {
+	position: absolute;
+	top: 0;
+	width: 500px;
+	height: 100px;
+	display: block;
+	background: url(pepperCutOut.png);
+	z-index: 2
+}
+#pepperHeat {
+	position: absolute;
+	left: -500px;
+	top: 0 ;
+    background: linear-gradient(to bottom, rgba(41,115,46,1) 0%, rgba(47,204,47,1) 24%, rgba(255,30,0,1) 24%, rgba(235,20,0,1) 100%);
+	width: 500px;
+	height: 100px;
+	display: block;
+	z-index: 1
+}
