@@ -7,6 +7,8 @@
 	position: relative;
 	background: #E4E4E4;
 	cursor: pointer;
+	margin: 0 auto;
+	overflow: hidden;
 }
 #pepper-silhouette {
 	position: absolute;

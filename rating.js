@@ -1,6 +1,8 @@
 $( "#pepperBox" ).mousemove(function(){
 	console.log('works')
-	var clientCoords = event.clientX-500;
+	var winWidth = $(window).width()*.5 - 250;
+	var clientCoords = event.pageX - (winWidth+500);
+	
 	$('#pepperHeat').css("left", clientCoords+"px");
 
 	var pepperized = Math.floor(clientCoords / 100 + 6);
@@ -30,7 +32,7 @@ function saveRate(rateValue, imgID){
 	rate.set("User", user);
 	rate.save(null, {
 	  	success: function(post) {
-	  		console.log(rate.get("DribbleID"));
+
 		    // // Find all posts by the current user
 		    // var query = new Parse.Query(Post);
 		    // query.equalTo("user", user);

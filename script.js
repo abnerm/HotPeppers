@@ -1,4 +1,4 @@
-Parse.initialize("wOW5Lwm3dYPdAW7jSDEuNT0atv2NIs3JXMpsCePI", "IMmc2EJXfsMAXIkZvFlDvYV3zNE6bo6nRzwcKzD6");
+	Parse.initialize("wOW5Lwm3dYPdAW7jSDEuNT0atv2NIs3JXMpsCePI", "IMmc2EJXfsMAXIkZvFlDvYV3zNE6bo6nRzwcKzD6");
 
 if(Parse.User.current() !== null) {
 	removeMeta();
@@ -35,11 +35,15 @@ function removeMeta(){
 	y.remove();
 	z.remove();
 
-	var username = document.createElement('p');
+	var username = document.createElement('h2');
 		username.innerHTML = currentUser;
 
+	var account = document.createElement('div');
+		account.id = "account";
+
 	var metaParent = document.getElementById('meta');
-		metaParent.insertBefore(username, manageUsrStatus);
+		account.appendChild(username);
+		metaParent.insertBefore(account, manageUsrStatus);
 }
 
 function manageUser(){
