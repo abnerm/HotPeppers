@@ -9,6 +9,7 @@ if(Parse.User.current() !== null) {
 
 function signUpUser (){
 	var user = new Parse.User();
+	//hello
 	user.set("username", document.getElementById('username').value);
 	user.set("password", document.getElementById('password').value);
 
