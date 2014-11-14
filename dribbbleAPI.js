@@ -6,7 +6,8 @@ var dribbbleOptions = {
 
 
 function getData(json){
-	
+	var userQuery = new Parse.Query(Parse.User);
+	console.log(userQuery);
 	var query = new Parse.Query('Rating');
 	query.find({
 	  success: function(results) {

@@ -1,4 +1,4 @@
-	Parse.initialize("wOW5Lwm3dYPdAW7jSDEuNT0atv2NIs3JXMpsCePI", "IMmc2EJXfsMAXIkZvFlDvYV3zNE6bo6nRzwcKzD6");
+Parse.initialize("wOW5Lwm3dYPdAW7jSDEuNT0atv2NIs3JXMpsCePI", "IMmc2EJXfsMAXIkZvFlDvYV3zNE6bo6nRzwcKzD6");
 
 if(Parse.User.current() !== null) {
 	removeMeta();
@@ -22,7 +22,6 @@ function signUpUser (){
 		}
 	});
 };
-
 function removeMeta(){
 	var currentUser = Parse.User.current().attributes.username;
 	var x = document.getElementById('username');
@@ -40,11 +39,14 @@ function removeMeta(){
 
 	var account = document.createElement('div');
 		account.id = "account";
+		account.onclick = accounts;
 
 	var metaParent = document.getElementById('meta');
 		account.appendChild(username);
 		metaParent.insertBefore(account, manageUsrStatus);
 }
+
+
 
 function manageUser(){
 		
